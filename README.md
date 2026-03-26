@@ -54,9 +54,10 @@ El modelo semántico sigue un diseño de **Esquema en Estrella**, optimizado par
 ---
 
 ## 🚀 Tecnologías Utilizadas
-* **Microsoft Fabric:** Ecosistema unificado para todo el ciclo de vida del dato.
+* **PySpark (Notebooks):** Ingesta inicial de catálogos y manejo de archivos CSV en el Data Lake.
+* **Microsoft Fabric:** Ecosistema unificado de datos (Lakehouse + Warehouse).
 * **Data Factory:** Orquestación de Pipelines y automatización de ingestas.
-* **Synapse Data Warehouse:** Motor de procesamiento T-SQL para transformaciones de capa Silver.
+* **T-SQL:** Transformaciones complejas, lógica de deduplicación y creación de dimensiones.
 * **OneLake:** Almacenamiento "SaaS" basado en el estándar abierto Delta Lake.
 * **Power BI:** Visualización de alto impacto utilizando el modo de conexión **Direct Lake**.
 
@@ -64,5 +65,6 @@ El modelo semántico sigue un diseño de **Esquema en Estrella**, optimizado par
 
 ## 📂 Cómo usar este repositorio
 * En la carpeta `/sql` encontrarás los scripts DDL y DML para crear la estructura de las tablas.
-* En `/pipelines` se encuentra la lógica de orquestación (archivos JSON o capturas de flujo).
+* En `/pipelines` se encuentra la lógica de orquestación.
+* En `/notebooks` encontrarás el spript de creacion de zonas.
 * Revisa la carpeta `/docs` para ver el diagrama del modelo de datos y capturas del dashboard final.
