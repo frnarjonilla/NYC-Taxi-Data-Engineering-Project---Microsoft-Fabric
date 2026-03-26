@@ -22,7 +22,8 @@ SQL
 -- Ejemplo de la lógica de filtrado dinámico
 WHERE YEAR(Fecha_Recogida) = 2019
   AND MONTH(Fecha_Recogida) = CAST(SUBSTRING(Parametro_Archivo, CHARINDEX('2019-', Parametro_Archivo) + 5, 2) AS INT)
-2. Integridad de Datos
+  
+  2. Integridad de Datos
 Para evitar la duplicidad en cargas incrementales, se implementó una estrategia de Upsert/Check mediante la cláusula NOT EXISTS, comparando la clave compuesta de Vendedor, Fecha y Monto Total.
 
 3. Modelo Semántico de Alto Rendimiento
