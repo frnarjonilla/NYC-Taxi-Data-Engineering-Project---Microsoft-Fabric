@@ -1,0 +1,34 @@
+table dim_tipos_pago
+	lineageTag: 072a3d53-dfad-4af5-8436-80be514bc1ab
+	sourceLineageTag: [dbo].[dim_tipos_pago]
+
+	column ID_Pago
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 5fbb3791-d644-4470-834b-0396a5d7bb18
+		sourceLineageTag: ID_Pago
+		summarizeBy: none
+		sourceColumn: ID_Pago
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tipo_Pago_Desc
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5a02da52-8908-46e6-bba5-1bc9932418e6
+		sourceLineageTag: Tipo_Pago_Desc
+		summarizeBy: none
+		sourceColumn: Tipo_Pago_Desc
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_tipos_pago = entity
+		mode: directLake
+		source
+			entityName: dim_tipos_pago
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

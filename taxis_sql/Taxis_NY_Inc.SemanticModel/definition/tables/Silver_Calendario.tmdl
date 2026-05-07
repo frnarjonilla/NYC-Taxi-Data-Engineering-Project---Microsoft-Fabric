@@ -1,0 +1,78 @@
+table Silver_Calendario
+	lineageTag: ea235748-7691-4faa-8304-3254ad06c788
+	sourceLineageTag: [dbo].[Silver_Calendario]
+
+	column ID_Fecha
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0e3d46e9-2af3-49f8-93f7-523f3c89bba3
+		sourceLineageTag: ID_Fecha
+		summarizeBy: none
+		sourceColumn: ID_Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anio
+		dataType: int64
+		formatString: 0
+		lineageTag: ae9e0c0c-acfb-437e-8728-d8dec4b1e898
+		sourceLineageTag: Anio
+		summarizeBy: none
+		sourceColumn: Anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes_Numero
+		dataType: int64
+		formatString: 0
+		lineageTag: b8b6537a-3ea0-4293-ae42-e3e8ccf362f1
+		sourceLineageTag: Mes_Numero
+		summarizeBy: none
+		sourceColumn: Mes_Numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes_Nombre
+		dataType: string
+		lineageTag: 5bbbdf0f-8ed4-48ad-b7f9-c17fcf2c0fbe
+		sourceLineageTag: Mes_Nombre
+		summarizeBy: none
+		sourceColumn: Mes_Nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column Semana_Anio
+		dataType: int64
+		formatString: 0
+		lineageTag: b2b5c09f-41e8-4aa4-8572-ecf46506df45
+		sourceLineageTag: Semana_Anio
+		summarizeBy: none
+		sourceColumn: Semana_Anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia_Semana
+		dataType: string
+		lineageTag: 0aa6091e-1238-41ea-b962-283e0a16801c
+		sourceLineageTag: Dia_Semana
+		summarizeBy: none
+		sourceColumn: Dia_Semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tipo_Dia
+		dataType: string
+		lineageTag: 0edf4edf-7da4-44a1-98c4-7dca8feea499
+		sourceLineageTag: Tipo_Dia
+		summarizeBy: none
+		sourceColumn: Tipo_Dia
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Silver_Calendario = entity
+		mode: directLake
+		source
+			entityName: Silver_Calendario
+			schemaName: dbo
+			expressionSource: 'DirectLake - DW_Taxis'
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "06NB_Limpieza_Staging"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "9cfbad77-7598-98e6-4f3e-7f9b314ffea9"
+  }
+}

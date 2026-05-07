@@ -1,0 +1,128 @@
+table Silver_Viajes_Taxis
+	lineageTag: c158e03f-25a9-43b4-b51c-1006ffc8d118
+	sourceLineageTag: [dbo].[Silver_Viajes_Taxis]
+
+	column ID_Vendedor
+		dataType: int64
+		formatString: 0
+		lineageTag: cd74245e-3042-46b6-a2e6-4f94bc8d3718
+		sourceLineageTag: ID_Vendedor
+		summarizeBy: sum
+		sourceColumn: ID_Vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha_Recogida
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: bb3452fc-8faa-4b82-b716-1ae1c3ae3871
+		sourceLineageTag: Fecha_Recogida
+		summarizeBy: none
+		sourceColumn: Fecha_Recogida
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha_Entrega
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e34c7878-d885-4144-9478-d4d9e2025a38
+		sourceLineageTag: Fecha_Entrega
+		summarizeBy: none
+		sourceColumn: Fecha_Entrega
+
+		annotation SummarizationSetBy = Automatic
+
+	column Numero_Pasajeros
+		dataType: int64
+		formatString: 0
+		lineageTag: 9d6b0c87-e80b-415c-a7fa-4355703057e6
+		sourceLineageTag: Numero_Pasajeros
+		summarizeBy: sum
+		sourceColumn: Numero_Pasajeros
+
+		annotation SummarizationSetBy = Automatic
+
+	column Distancia_Viaje
+		dataType: double
+		lineageTag: 433257a2-371e-46f6-ad14-cb1c939978f9
+		sourceLineageTag: Distancia_Viaje
+		summarizeBy: sum
+		sourceColumn: Distancia_Viaje
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ID_Lugar_Recogida
+		dataType: int64
+		formatString: 0
+		lineageTag: 154b94ba-658d-401d-a8e3-f3a4b8aaf45d
+		sourceLineageTag: ID_Lugar_Recogida
+		summarizeBy: none
+		sourceColumn: ID_Lugar_Recogida
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Lugar_Entrega
+		dataType: int64
+		formatString: 0
+		lineageTag: 10626ff5-9aaa-4e59-b933-94db0bc3ef71
+		sourceLineageTag: ID_Lugar_Entrega
+		summarizeBy: sum
+		sourceColumn: ID_Lugar_Entrega
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tarifa_Base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: d1fb5482-bb29-445a-881b-6d9c6819d043
+		sourceLineageTag: Tarifa_Base
+		summarizeBy: sum
+		sourceColumn: Tarifa_Base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es"}
+
+	column Propina
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 0b77206f-6623-4e06-9548-5a5986039191
+		sourceLineageTag: Propina
+		summarizeBy: sum
+		sourceColumn: Propina
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es"}
+
+	column Monto_Total
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: eedffc3c-df9a-4cf3-8a98-a67e3de5f9c8
+		sourceLineageTag: Monto_Total
+		summarizeBy: sum
+		sourceColumn: Monto_Total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es"}
+
+	column ID_Tipo_Pago
+		dataType: int64
+		formatString: 0
+		lineageTag: 42fd96f9-d7d5-4fba-877e-447ed6e77749
+		sourceLineageTag: ID_Tipo_Pago
+		summarizeBy: none
+		sourceColumn: ID_Tipo_Pago
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Silver_Viajes_Taxis = entity
+		mode: directLake
+		source
+			entityName: Silver_Viajes_Taxis
+			schemaName: dbo
+			expressionSource: 'DirectLake - DW_Taxis'
+

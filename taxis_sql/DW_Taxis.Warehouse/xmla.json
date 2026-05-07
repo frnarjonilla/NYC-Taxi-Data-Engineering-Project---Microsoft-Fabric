@@ -1,0 +1,483 @@
+{
+  "name": "{{Dataset_Name}}",
+  "compatibilityLevel": 1604,
+  "model": {
+    "name": "{{Dataset_Name}}",
+    "culture": "en-US",
+    "collation": "Latin1_General_100_BIN2_UTF8",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Silver_Calendario",
+        "sourceLineageTag": "[dbo].[Silver_Calendario]",
+        "columns": [
+          {
+            "name": "ID_Fecha",
+            "dataType": "dateTime",
+            "sourceColumn": "ID_Fecha",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "ID_Fecha",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Anio",
+            "dataType": "int64",
+            "sourceColumn": "Anio",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Anio",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Mes_Numero",
+            "dataType": "int64",
+            "sourceColumn": "Mes_Numero",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Mes_Numero",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Mes_Nombre",
+            "dataType": "string",
+            "sourceColumn": "Mes_Nombre",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Mes_Nombre",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Semana_Anio",
+            "dataType": "int64",
+            "sourceColumn": "Semana_Anio",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Semana_Anio",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Dia_Semana",
+            "dataType": "string",
+            "sourceColumn": "Dia_Semana",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Dia_Semana",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Tipo_Dia",
+            "dataType": "string",
+            "sourceColumn": "Tipo_Dia",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Tipo_Dia",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "Silver_Calendario",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "Silver_Tipos_Pago",
+        "sourceLineageTag": "[dbo].[Silver_Tipos_Pago]",
+        "columns": [
+          {
+            "name": "ID_Tipo_Pago",
+            "dataType": "int64",
+            "sourceColumn": "ID_Tipo_Pago",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ID_Tipo_Pago",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Descripcion_Pago",
+            "dataType": "string",
+            "sourceColumn": "Descripcion_Pago",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Descripcion_Pago",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "Silver_Tipos_Pago",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "Silver_Viajes_Taxis",
+        "sourceLineageTag": "[dbo].[Silver_Viajes_Taxis]",
+        "columns": [
+          {
+            "name": "ID_Vendedor",
+            "dataType": "int64",
+            "sourceColumn": "ID_Vendedor",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ID_Vendedor",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Fecha_Recogida",
+            "dataType": "dateTime",
+            "sourceColumn": "Fecha_Recogida",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "Fecha_Recogida",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Fecha_Entrega",
+            "dataType": "dateTime",
+            "sourceColumn": "Fecha_Entrega",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "Fecha_Entrega",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Numero_Pasajeros",
+            "dataType": "int64",
+            "sourceColumn": "Numero_Pasajeros",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Numero_Pasajeros",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Distancia_Viaje",
+            "dataType": "double",
+            "sourceColumn": "Distancia_Viaje",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "Distancia_Viaje",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "ID_Lugar_Recogida",
+            "dataType": "int64",
+            "sourceColumn": "ID_Lugar_Recogida",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ID_Lugar_Recogida",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ID_Lugar_Entrega",
+            "dataType": "int64",
+            "sourceColumn": "ID_Lugar_Entrega",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ID_Lugar_Entrega",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Tarifa_Base",
+            "dataType": "decimal",
+            "sourceColumn": "Tarifa_Base",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "Tarifa_Base",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Propina",
+            "dataType": "decimal",
+            "sourceColumn": "Propina",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "Propina",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Monto_Total",
+            "dataType": "decimal",
+            "sourceColumn": "Monto_Total",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "Monto_Total",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ID_Tipo_Pago",
+            "dataType": "int64",
+            "sourceColumn": "ID_Tipo_Pago",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ID_Tipo_Pago",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "Silver_Viajes_Taxis",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "Silver_Zonas",
+        "sourceLineageTag": "[dbo].[Silver_Zonas]",
+        "columns": [
+          {
+            "name": "ID_Ubicacion",
+            "dataType": "int64",
+            "sourceColumn": "ID_Ubicacion",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ID_Ubicacion",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Distrito",
+            "dataType": "string",
+            "sourceColumn": "Distrito",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Distrito",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Barrio",
+            "dataType": "string",
+            "sourceColumn": "Barrio",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Barrio",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Zona_Servicio",
+            "dataType": "string",
+            "sourceColumn": "Zona_Servicio",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Zona_Servicio",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "Silver_Zonas",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DatabaseQuery",
+        "kind": "m",
+        "expression": "let\n    database = {{TDS_Endpoint}}\nin\n    database\n"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "SourceLineageTagType",
+        "value": "DatabaseFullyQualifiedName"
+      }
+    ]
+  }
+}

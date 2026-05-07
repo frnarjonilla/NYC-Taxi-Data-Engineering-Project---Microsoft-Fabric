@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Mod_Sem_Taxis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "271bd57e-f62d-a923-43d1-ddf2a20fc95c"
+  }
+}

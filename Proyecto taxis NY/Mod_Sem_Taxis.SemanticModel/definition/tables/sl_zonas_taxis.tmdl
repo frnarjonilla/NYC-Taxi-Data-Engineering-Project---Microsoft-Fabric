@@ -1,0 +1,44 @@
+table sl_zonas_taxis
+	lineageTag: 2936c6e2-034d-41ac-bfe1-dc6a5abd0be0
+	sourceLineageTag: [dbo].[sl_zonas_taxis]
+
+	column ID_Zona
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 076d63c2-732a-43d3-a981-b1c246c5af1c
+		sourceLineageTag: ID_Zona
+		summarizeBy: none
+		sourceColumn: ID_Zona
+
+		annotation SummarizationSetBy = Automatic
+
+	column Distrito
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8f4217aa-314a-4317-af97-423bfc012abf
+		sourceLineageTag: Distrito
+		summarizeBy: none
+		sourceColumn: Distrito
+
+		annotation SummarizationSetBy = Automatic
+
+	column Barrio
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a7af735a-16a4-4f68-a637-0214cd2014ce
+		sourceLineageTag: Barrio
+		summarizeBy: none
+		sourceColumn: Barrio
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sl_zonas_taxis = entity
+		mode: directLake
+		source
+			entityName: sl_zonas_taxis
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

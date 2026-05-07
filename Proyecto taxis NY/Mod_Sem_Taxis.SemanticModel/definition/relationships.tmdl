@@ -1,0 +1,17 @@
+relationship a2f2476f-bb93-8192-b3ae-8243b0e4a27c
+	fromColumn: sl_taxis.ID_Zona_Origen
+	toColumn: sl_zonas_taxis.ID_Zona
+
+relationship 2cbb7be1-c439-8434-f003-698c149600fe
+	isActive: false
+	fromColumn: sl_taxis.ID_Zona_Destino
+	toColumn: sl_zonas_taxis.ID_Zona
+
+relationship b862c2c8-54bb-2435-204c-5c61d8af8da7
+	fromColumn: sl_taxis.Tipo_Pago
+	toColumn: dim_tipos_pago.ID_Pago
+
+relationship a46ef0cf-b8ec-6755-e8b6-6521766e1c44
+	fromColumn: sl_taxis.Fecha_Recogida
+	toColumn: dim_calendario.Fecha_Full
+

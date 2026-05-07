@@ -1,0 +1,113 @@
+table dim_calendario
+	lineageTag: a2b99ed8-67ea-470c-ac5b-9bb146994461
+	sourceLineageTag: [dbo].[dim_calendario]
+
+	column Fecha_Full
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 8d84307e-17dd-4942-8655-19646ea0ef6a
+		sourceLineageTag: Fecha_Full
+		summarizeBy: none
+		sourceColumn: Fecha_Full
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 3b9521c7-7203-425d-92d4-bd3d21557b94
+		sourceLineageTag: Fecha
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anio
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4b7c3daf-f5e4-4bd1-84c8-73ff67be2009
+		sourceLineageTag: Anio
+		summarizeBy: none
+		sourceColumn: Anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes_Numero
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 329b8722-624c-4a56-a948-860c531fdbe9
+		sourceLineageTag: Mes_Numero
+		summarizeBy: none
+		sourceColumn: Mes_Numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes_Nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c1a46958-358e-4cd5-889a-d7a72d8db75f
+		sourceLineageTag: Mes_Nombre
+		summarizeBy: none
+		sourceColumn: Mes_Nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: df68f17d-9cc5-4c3d-9b1b-e80893b37de1
+		sourceLineageTag: Dia
+		summarizeBy: none
+		sourceColumn: Dia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia_Semana_Numero
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 766282e2-5b0d-450a-93a5-c0dd96855ba3
+		sourceLineageTag: Dia_Semana_Numero
+		summarizeBy: none
+		sourceColumn: Dia_Semana_Numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia_Semana_Nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 42ec6b3b-6a54-4357-a342-6c925e95d304
+		sourceLineageTag: Dia_Semana_Nombre
+		summarizeBy: none
+		sourceColumn: Dia_Semana_Nombre
+		sortByColumn: Dia_Semana_Numero
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hora_Entera
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: fa3d6679-2f05-45a3-b12b-f38f391375bc
+		sourceLineageTag: Hora_Entera
+		summarizeBy: none
+		sourceColumn: Hora_Entera
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_calendario = entity
+		mode: directLake
+		source
+			entityName: dim_calendario
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

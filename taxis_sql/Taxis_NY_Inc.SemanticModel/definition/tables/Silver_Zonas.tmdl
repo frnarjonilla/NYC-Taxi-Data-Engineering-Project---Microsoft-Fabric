@@ -1,0 +1,48 @@
+table Silver_Zonas
+	lineageTag: 8fb3d544-a347-4f3d-bf0c-fc8b2a6efbe2
+	sourceLineageTag: [dbo].[Silver_Zonas]
+
+	column ID_Ubicacion
+		dataType: int64
+		formatString: 0
+		lineageTag: e13f4d2e-c7e8-443e-9ff9-2c792deded5b
+		sourceLineageTag: ID_Ubicacion
+		summarizeBy: none
+		sourceColumn: ID_Ubicacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Distrito
+		dataType: string
+		lineageTag: 3b2c9849-5c5d-4aea-9953-435773eb4288
+		sourceLineageTag: Distrito
+		summarizeBy: none
+		sourceColumn: Distrito
+
+		annotation SummarizationSetBy = Automatic
+
+	column Barrio
+		dataType: string
+		lineageTag: 38bd3582-21ce-4f72-a0cb-9f0af726b29c
+		sourceLineageTag: Barrio
+		summarizeBy: none
+		sourceColumn: Barrio
+
+		annotation SummarizationSetBy = Automatic
+
+	column Zona_Servicio
+		dataType: string
+		lineageTag: ff7d294a-9563-4c03-8cdf-a3282aafadac
+		sourceLineageTag: Zona_Servicio
+		summarizeBy: none
+		sourceColumn: Zona_Servicio
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Silver_Zonas = entity
+		mode: directLake
+		source
+			entityName: Silver_Zonas
+			schemaName: dbo
+			expressionSource: 'DirectLake - DW_Taxis'
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "04_NB_Silver_Viajes"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1f4bf90f-e217-ab93-4319-e1cfd6b19011"
+  }
+}

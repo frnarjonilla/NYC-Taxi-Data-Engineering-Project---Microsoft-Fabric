@@ -1,0 +1,51 @@
+{
+  "name": "NewExecutive",
+  "dataColors": [
+    "#FBC02D",
+    "#252525",
+    "#F0F0F0",
+    "#DD6B7F",
+    "#6B91C9",
+    "#F5C869",
+    "#77C4A8",
+    "#DEA6CF"
+  ],
+  "tableAccent": "#3257A8",
+  "maximum": "#3257A8",
+  "center": "#DD6B7F",
+  "minimum": "#D1DBF1",
+  "textClasses": {
+    "label": {
+      "color": "#F0F0F0"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#252525"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "transparency": 100
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "04NB_Control_Ejecuciones"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "8a697339-8210-9cce-475a-62f09b1f7a71"
+  }
+}

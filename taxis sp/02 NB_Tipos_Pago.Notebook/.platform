@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "02 NB_Tipos_Pago"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "db3dc964-5881-816e-460e-26b11f76a288"
+  }
+}

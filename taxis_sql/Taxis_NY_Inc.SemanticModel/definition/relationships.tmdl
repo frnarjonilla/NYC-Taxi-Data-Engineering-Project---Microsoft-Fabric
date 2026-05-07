@@ -1,0 +1,12 @@
+relationship e7ffc913-273d-57de-6335-3d748e67c6f9
+	fromColumn: Silver_Viajes_Taxis.Fecha_Recogida
+	toColumn: Silver_Calendario.ID_Fecha
+
+relationship f03a50e8-2a4d-f230-5710-e8f04d8b8115
+	fromColumn: Silver_Viajes_Taxis.ID_Tipo_Pago
+	toColumn: Silver_Tipos_Pago.ID_Tipo_Pago
+
+relationship bb65ceab-c347-cbc4-5f59-922aad3c04f9
+	fromColumn: Silver_Viajes_Taxis.ID_Lugar_Recogida
+	toColumn: Silver_Zonas.ID_Ubicacion
+

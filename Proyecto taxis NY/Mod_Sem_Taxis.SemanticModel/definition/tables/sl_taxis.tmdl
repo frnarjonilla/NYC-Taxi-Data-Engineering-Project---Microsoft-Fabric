@@ -1,0 +1,197 @@
+table sl_taxis
+	lineageTag: 170fd963-9c1c-4043-bc6d-5a538f8050b9
+	sourceLineageTag: [dbo].[sl_taxis]
+
+	column ID_Proveedor
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 77c84dc4-82b2-4755-bdd9-801df77bb1e8
+		sourceLineageTag: ID_Proveedor
+		summarizeBy: sum
+		sourceColumn: ID_Proveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha_Recogida
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 43344d5a-155f-421a-aa9e-b887bc9f88b6
+		sourceLineageTag: Fecha_Recogida
+		summarizeBy: none
+		sourceColumn: Fecha_Recogida
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha_Entrega
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: f71ddc89-8ae2-4151-9768-130d57a3a806
+		sourceLineageTag: Fecha_Entrega
+		summarizeBy: none
+		sourceColumn: Fecha_Entrega
+
+		annotation SummarizationSetBy = Automatic
+
+	column Num_Pasajeros
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d85133a7-3e35-4d32-93fd-4131852ec7ab
+		sourceLineageTag: Num_Pasajeros
+		summarizeBy: sum
+		sourceColumn: Num_Pasajeros
+
+		annotation SummarizationSetBy = Automatic
+
+	column Distancia_Viaje
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 7d26ba0d-75b2-4683-8f4e-ca15acfe8728
+		sourceLineageTag: Distancia_Viaje
+		summarizeBy: sum
+		sourceColumn: Distancia_Viaje
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ID_Tarifa
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2216005f-818b-470b-9887-40e50251f86f
+		sourceLineageTag: ID_Tarifa
+		summarizeBy: sum
+		sourceColumn: ID_Tarifa
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Zona_Origen
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c687c249-3004-4dad-88ff-3f962e0d6b34
+		sourceLineageTag: ID_Zona_Origen
+		summarizeBy: none
+		sourceColumn: ID_Zona_Origen
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Zona_Destino
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 539e3a3a-2d74-4703-9245-33fa204c7fd9
+		sourceLineageTag: ID_Zona_Destino
+		summarizeBy: sum
+		sourceColumn: ID_Zona_Destino
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tipo_Pago
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 413ddd1a-73fe-4fa0-a4de-1c5c6bac5c02
+		sourceLineageTag: Tipo_Pago
+		summarizeBy: none
+		sourceColumn: Tipo_Pago
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tarifa_Base
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 47f2ec05-510f-41c8-9924-5a1eb60ea8ac
+		sourceLineageTag: Tarifa_Base
+		summarizeBy: sum
+		sourceColumn: Tarifa_Base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Extra_Cargos
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 1c0e8f45-28ba-468d-8ab9-818309062676
+		sourceLineageTag: Extra_Cargos
+		summarizeBy: sum
+		sourceColumn: Extra_Cargos
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Impuesto_MTA
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 66bfd414-620e-4aae-90b1-5f1f3d79c487
+		sourceLineageTag: Impuesto_MTA
+		summarizeBy: sum
+		sourceColumn: Impuesto_MTA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Propina
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 63275cc0-caaf-4f26-8ecb-c15871d90236
+		sourceLineageTag: Propina
+		summarizeBy: sum
+		sourceColumn: Propina
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Peajes
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 4e4f804e-80c0-4af2-97ed-2d08aa39fe51
+		sourceLineageTag: Peajes
+		summarizeBy: sum
+		sourceColumn: Peajes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Total_Pagado
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 13b8539c-36cb-4d7f-81e6-d413bc1f0856
+		sourceLineageTag: Total_Pagado
+		summarizeBy: sum
+		sourceColumn: Total_Pagado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Duracion_Minutos
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 654dcf28-4046-4fb6-ac6d-9b2bd4c1f47d
+		sourceLineageTag: Duracion_Minutos
+		summarizeBy: sum
+		sourceColumn: Duracion_Minutos
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition sl_taxis = entity
+		mode: directLake
+		source
+			entityName: sl_taxis
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

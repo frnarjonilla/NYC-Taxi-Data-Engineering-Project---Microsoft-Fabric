@@ -1,0 +1,9 @@
+expression 'DirectLake - DW_Taxis' =
+		let
+		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/5380f59f-5ecb-43d3-ac2d-b87dd26ea6ec/ccc886eb-c038-4264-a348-cd31fe21ec1f", [HierarchicalNavigation=true])
+		in
+		    Source
+	lineageTag: e243e85a-3b98-49db-af54-fc39547d3ff6
+
+	annotation PBI_IncludeFutureArtifacts = False
+

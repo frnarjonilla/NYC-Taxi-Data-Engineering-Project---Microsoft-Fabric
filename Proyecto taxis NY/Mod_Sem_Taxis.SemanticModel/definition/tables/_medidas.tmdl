@@ -1,0 +1,23 @@
+table _medidas
+	lineageTag: 3a84523d-7695-449c-9587-ae6e92f2b7ba
+	sourceLineageTag: [dbo].[_medidas]
+
+	column Info
+		dataType: string
+		sourceProviderType: varchar(21)
+		lineageTag: fdc6aa6e-e8ee-4e86-a39d-afb1bc0ea28e
+		sourceLineageTag: Info
+		summarizeBy: none
+		sourceColumn: Info
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _medidas = entity
+		mode: directLake
+		source
+			entityName: _medidas
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
