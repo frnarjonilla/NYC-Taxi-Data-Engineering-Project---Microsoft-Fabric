@@ -104,7 +104,7 @@
           "operationType": "SemanticModelRefresh"
         },
         "externalReferences": {
-          "connection": "ac9e3cc4-c318-4fe1-a355-bae7265bc438"
+          "connection": ""
         },
         "policy": {
           "timeout": "0.12:00:00",
