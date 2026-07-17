@@ -36,7 +36,7 @@
                 "properties": {
                   "type": "Lakehouse",
                   "typeProperties": {
-                    "artifactId": "2c055c27-e7eb-98e9-4cf2-7eefa129bb89",
+                    "artifactId": "",
                     "workspaceId": "00000000-0000-0000-0000-000000000000",
                     "rootFolder": "Files"
                   },
@@ -63,7 +63,7 @@
                 "properties": {
                   "type": "Lakehouse",
                   "typeProperties": {
-                    "artifactId": "2c055c27-e7eb-98e9-4cf2-7eefa129bb89",
+                    "artifactId": "",
                     "workspaceId": "00000000-0000-0000-0000-000000000000",
                     "rootFolder": "Tables"
                   },
@@ -312,9 +312,9 @@
           "properties": {
             "type": "DataWarehouse",
             "typeProperties": {
-              "artifactId": "ccc886eb-c038-4264-a348-cd31fe21ec1f",
-              "endpoint": "usarqm4davbe7gchl23zafqspq-t72yau6ll3juhlbnxb65e3vg5q.datawarehouse.fabric.microsoft.com",
-              "workspaceId": "5380f59f-5ecb-43d3-ac2d-b87dd26ea6ec"
+              "artifactId": "",
+              "endpoint": "",
+              "workspaceId": ""
             },
             "annotations": []
           }
